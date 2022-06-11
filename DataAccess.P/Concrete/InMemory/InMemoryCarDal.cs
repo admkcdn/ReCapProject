@@ -1,7 +1,7 @@
-﻿using DataAccess.Abstract;
-using Entities.Concrete;
+﻿using DataAccess.P.Abstract;
+using System.Linq.Expressions;
 
-namespace DataAccess.Concrete.InMemory
+namespace DataAccess.P.Concrete.InMemory
 {
     public class InMemoryCarDal : ICarDal
     {
@@ -33,9 +33,19 @@ namespace DataAccess.Concrete.InMemory
             _cars.Remove(carToDelete);
         }
 
+        public Car Get(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Car> GetAll()
         {
             return _cars;
+        }
+
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Car> GetById(int id)

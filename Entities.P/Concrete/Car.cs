@@ -1,6 +1,6 @@
-﻿using Entities.Abstract;
+﻿using DataAccess.P.Abstract;
 
-namespace Entities.Concrete
+namespace DataAccess.P.Concrete
 {
     public class Car : IEntity
     {
