@@ -1,4 +1,6 @@
 ﻿using Business.P.Abstract;
+using Business.P.Constants;
+using Core.Utilities.Results;
 using DataAccess.P.Abstract;
 using DataAccess.P.Concrete;
 
@@ -13,9 +15,9 @@ namespace Business.P.Concrete
             _carDal = carDal;
         }
 
-        public List<Car> GetAll()
+        public IDataResult<List<Car>> GetAll()
         {
-            return _carDal.GetAll();
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.CarsListed);
         }
         public List<Car> GetCarsByColorId(int id)
         {
@@ -27,15 +29,15 @@ namespace Business.P.Concrete
             return _carDal.GetAll(p => p.BrandId == id);
         }
 
-        public void Add(Car car)
+        public IResult Add(Car car)
         {
-            if(car.Description.Length >= 2 && car.DailyPrice > 0)
+            if (car.Description.Length >= 2 && car.DailyPrice > 0)
             {
                 _carDal.Add(car);
-                Console.WriteLine("Araba başarıyla eklendi");
+                return new SuccessResult(Messages.CarAdded);
             }
             else
-                Console.WriteLine("Lütfen doğru değerler giriniz.");
+                return new ErrorResult(Messages.InvalidCarName);
         }
 
         public void Update(Car car)

@@ -1,11 +1,13 @@
-﻿
-using Core.Entities;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DataAccess.P.Concrete
+namespace Entities.P.DTOs
 {
-    public class Car : IEntity
+    public class CarDetailDto 
     {
-        // Id, BrandId, ColorId, ModelYear, DailyPrice, Description
         public int Id { get; set; }
         public int BrandId { get; set; }
         public int ColorId { get; set; }
