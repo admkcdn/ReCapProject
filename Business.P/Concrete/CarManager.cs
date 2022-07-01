@@ -2,7 +2,7 @@
 using Business.P.Constants;
 using Core.Utilities.Results;
 using DataAccess.P.Abstract;
-using DataAccess.P.Concrete;
+using Entities.P.Concrete;
 
 namespace Business.P.Concrete
 {

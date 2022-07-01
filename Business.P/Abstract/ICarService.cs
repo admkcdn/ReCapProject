@@ -1,5 +1,5 @@
 ﻿using Core.Utilities.Results;
-using DataAccess.P.Concrete;
+using Entities.P.Concrete;
 
 namespace Business.P.Abstract
 {

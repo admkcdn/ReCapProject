@@ -1,7 +1,7 @@
 ﻿
 using Core.Entities;
 
-namespace DataAccess.P.Concrete
+namespace Entities.P.Concrete
 {
     public class Car : IEntity
     {

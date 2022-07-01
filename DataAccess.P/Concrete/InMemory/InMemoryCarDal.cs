@@ -1,4 +1,5 @@
 ﻿using DataAccess.P.Abstract;
+using Entities.P.Concrete;
 using System.Linq.Expressions;
 
 namespace DataAccess.P.Concrete.InMemory

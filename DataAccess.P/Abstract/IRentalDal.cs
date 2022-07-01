@@ -3,7 +3,7 @@ using Entities.P.Concrete;
 
 namespace DataAccess.P.Abstract
 {
-    public interface ICarDal : IEntityRepository<Car>
+    public interface IRentalDal : IEntityRepository<Rentals>
     {
     }
 }
